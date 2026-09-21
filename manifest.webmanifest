@@ -1,9 +1,10 @@
 {
   "name": "Einkaufshilfe",
-  "short_name": "Einkaufshilfe",
+  "short_name": "Preisscan",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0b0d10",
-  "theme_color": "#0f1115",
-  "lang": "de"
+  "background_color": "#090c10",
+  "theme_color": "#0d1117",
+  "lang": "de",
+  "description": "Private Preisübersicht und Produktsuche für Mannheim und Umgebung."
 }
