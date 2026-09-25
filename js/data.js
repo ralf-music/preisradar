@@ -2,7 +2,7 @@ window.PREISSCAN_DATA = {
   app: {
     name: "Einkaufshilfe",
     technicalName: "preisscan",
-    version: "0.3.0"
+    version: "0.3.1"
   },
 
   markets: [
@@ -56,6 +56,20 @@ window.PREISSCAN_DATA = {
             {type:"offer", value:0.99, label:"Angebot"}
           ],
           note:"Angebot wird gemäß Projektregel auch für Coca-Cola Zero derselben Größe übernommen."
+        },
+        edeka:{
+          status:"price",
+          checked:"2026-09-25T22:35:00+02:00",
+          source:"kaufDA Mannheim · EDEKA-Angebot",
+          prices:[{type:"offer", value:1.11, label:"Angebot"}],
+          note:"1,25-l-Angebot aus dem regionalen Mannheimer Angebotsvergleich; Filialabweichungen möglich."
+        },
+        netto:{
+          status:"price",
+          checked:"2026-09-25T22:35:00+02:00",
+          source:"kaufDA Mannheim · Netto Marken-Discount",
+          prices:[{type:"offer", value:1.59, label:"Angebot ab"}],
+          note:"1,25-l-Zuordnung über den ausgewiesenen Grundpreis 1,27 €/l; regionale Abweichungen möglich."
         }
       }
     },
@@ -73,7 +87,15 @@ window.PREISSCAN_DATA = {
       image:"https://d17zv3ray5yxvp.cloudfront.net/variants/PUA9MBF1UekggKmvFrnXFChQ/51b8aa181ad15015651703a4356668224748770ff8b1ba318f5b3051f549af07",
       imageLabel:"Coca-Cola Zero 1,5 l",
       defaultAlarm:null,
-      marketStates:{}
+      marketStates:{
+        penny:{
+          status:"price",
+          checked:"2026-09-25T22:35:00+02:00",
+          source:"kaufDA Mannheim · PENNY-Angebot",
+          prices:[{type:"offer", value:1.29, label:"Angebot"}],
+          note:"1,5-l-Zuordnung über den ausgewiesenen Grundpreis 0,86 €/l; regionale Abweichungen möglich."
+        }
+      }
     },
     {
       id:"monster-rossi",
@@ -85,7 +107,7 @@ window.PREISSCAN_DATA = {
       amount:0.5,
       unit:"l",
       ean:null,
-      image:"https://web-assests.monsterenergy.com/mnst/f1065fb5-d076-4ddc-8131-70ff7ba28e3c.png",
+      image:"https://idrinks.cdn.shoprenter.hu/custom/idrinks/image/data/product/idrinks-monster-the-doctor-05.webp?lastmod=1727158360.1767191236",
       imageLabel:"Monster Energy Rossi Edition 0,5 l",
       defaultAlarm:null,
       marketStates:{
@@ -103,7 +125,7 @@ window.PREISSCAN_DATA = {
     {id:"coke125", family:"coca-cola-zero", promotionFamily:"coca-cola-cola", searchTerms:["coca cola zero","coca-cola zero","coke zero"], name:"Coca-Cola Zero Sugar", size:"1,25 l", packageType:"PET-Einwegflasche", unitType:"volume", amount:1.25, unit:"l", ean:null, image:"https://www.dropwinkel.eu/media/cache/gallery_zoom/product/3130/coca-cola-zero-pet-12-x-125-liter.jpg"},
     {id:"coke150", family:"coca-cola-zero", promotionFamily:"coca-cola-cola", searchTerms:["coca cola zero","coca-cola zero","coke zero"], name:"Coca-Cola Zero Sugar", size:"1,5 l", packageType:"PET-Flasche", unitType:"volume", amount:1.5, unit:"l", ean:null, image:"https://d17zv3ray5yxvp.cloudfront.net/variants/PUA9MBF1UekggKmvFrnXFChQ/51b8aa181ad15015651703a4356668224748770ff8b1ba318f5b3051f549af07"},
     {id:"coke200", family:"coca-cola-zero", promotionFamily:"coca-cola-cola", searchTerms:["coca cola zero","coca-cola zero","coke zero"], name:"Coca-Cola Zero Sugar", size:"2,0 l", packageType:"PET-Einwegflasche", unitType:"volume", amount:2, unit:"l", ean:null, image:"https://www.coca-cola.com/content/dam/onexp/de/de/home-images/coca-cola-zero-sugar/5000112552195.png"},
-    {id:"monster-rossi", family:"monster-rossi", searchTerms:["monster rossi","monster energy rossi","vr46"], name:"Monster Energy VR46 Rossi Edition", size:"0,5 l", packageType:"Dose", unitType:"volume", amount:0.5, unit:"l", ean:null, image:"https://web-assests.monsterenergy.com/mnst/f1065fb5-d076-4ddc-8131-70ff7ba28e3c.png"},
+    {id:"monster-rossi", family:"monster-rossi", searchTerms:["monster rossi","monster energy rossi","vr46"], name:"Monster Energy VR46 Rossi Edition", size:"0,5 l", packageType:"Dose", unitType:"volume", amount:0.5, unit:"l", ean:null, image:"https://idrinks.cdn.shoprenter.hu/custom/idrinks/image/data/product/idrinks-monster-the-doctor-05.webp?lastmod=1727158360.1767191236"},
 
     {id:"hack-mix-250", family:"hackfleisch-gemischt", searchTerms:["gemischtes hackfleisch","hackfleisch gemischt","hack gemischt"], name:"Gemischtes Hackfleisch", size:"250 g", packageType:"Packung", unitType:"weight", amount:250, unit:"g", ean:null},
     {id:"hack-mix-400", family:"hackfleisch-gemischt", searchTerms:["gemischtes hackfleisch","hackfleisch gemischt","hack gemischt"], name:"Gemischtes Hackfleisch", size:"400 g", packageType:"Packung", unitType:"weight", amount:400, unit:"g", ean:null},
@@ -120,5 +142,17 @@ window.PREISSCAN_DATA = {
     }
   ],
 
-  futureOffers: []
+  futureOffers: [
+    {
+      productId:"monster-rossi",
+      marketId:"norma",
+      price:0.88,
+      validFrom:"ab 28.09.2026",
+      validUntil:"03.10.2026",
+      type:"offer",
+      matchType:"family",
+      source:"NORMA Wochenangebot ab 28.09.",
+      note:"Monster Energy 0,5 l, verschiedene Sorten. Für VR46/The Doctor gilt der Preis nur, wenn die Sorte in der Filiale Teil des Angebots bzw. geführt ist."
+    }
+  ]
 };

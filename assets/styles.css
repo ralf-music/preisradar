@@ -148,3 +148,8 @@ th{color:var(--muted);text-transform:uppercase;letter-spacing:.035em;font-size:.
 @media(max-width:780px){
   .app-header{align-items:flex-start}.app-logo{width:50px;height:50px;border-radius:13px}.header-actions{justify-content:flex-start}.location-card,.location-card.editing{grid-template-columns:1fr}.location-form{grid-template-columns:1fr}.location-form input{min-width:0;width:100%}.market-logo{width:58px}.price-option{width:auto}.price-stack{min-width:130px}
 }
+
+.future-offer-row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:10px 0;border-top:1px solid rgba(255,255,255,.06)}
+.future-offer-row:first-of-type{border-top:0;padding-top:0}
+.future-offer-row small{display:block;color:var(--muted);font-size:.76rem;max-width:620px;margin-top:2px}
+.future-offer-row>strong,.future-price{color:var(--orange);white-space:nowrap}

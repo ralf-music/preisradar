@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.3.0
+## v0.3.1
 - Fehler der v0.2.0 behoben: vollständiges Projektpaket wiederhergestellt
 - bekannte reale Preisstände statt leerer Mock-Daten eingebaut
 - Coca-Cola Zero 1,25 l: NORMA-Angebot 0,99 € (21.09.–27.09.2026) hinterlegt
@@ -18,7 +18,7 @@
 - App-Logo als Browser-/PWA-Icon eingebunden
 - Händlerlogos nicht mehr von externen Bildservern abhängig; lokale CSS-Markenbadges eingebaut
 - Versionsnummer sichtbar im Header und Footer
-- Service-Worker-Cache auf v0.3.0 angehoben
+- Service-Worker-Cache auf v0.3.1 angehoben
 
 ## v0.2.0
 - Händlerlogos ergänzt

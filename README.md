@@ -2,7 +2,7 @@
 
 Private PWA „Einkaufshilfe“ für Preisvergleich, Produktsuche, Preiswecker und kommende Angebote.
 
-## Stand v0.3.0
+## Stand v0.3.1
 
 Umgesetzt:
 - responsive PWA-Oberfläche

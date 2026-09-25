@@ -374,7 +374,7 @@
               </div>
               <div class="future-box">
                 <h4>Kommende Angebote</h4>
-                ${upcoming.length ? upcoming.map(x=>`<div>${escapeHtml(marketById(x.marketId)?.name || x.marketId)}: <strong>${eur(x.price)}</strong> · ${escapeHtml(x.validFrom)}</div>`).join("") : `<div class="future-empty">Noch keine Zukunftsangebote hinterlegt.</div>`}
+                ${upcoming.length ? upcoming.map(x=>`<div class="future-offer-row"><div><strong>${escapeHtml(marketById(x.marketId)?.name || x.marketId)}</strong><small>${escapeHtml(x.validFrom)}${x.validUntil ? ` – ${escapeHtml(x.validUntil)}` : ""}${x.matchType === "family" ? " · Sortenangebot" : ""}</small>${x.note ? `<small>${escapeHtml(x.note)}</small>` : ""}</div><strong>${eur(x.price)}</strong></div>`).join("") : `<div class="future-empty">Aktuell kein verifiziertes Zukunftsangebot für diese konkrete Variante.</div>`}
               </div>
             </div>
           </article>`;
@@ -400,7 +400,7 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Händler / Filiale</th><th>Preise</th><th>Status</th><th>${unitPriceLabel(product)}</th><th>Geprüft / Quelle</th><th>Gültigkeit</th></tr></thead>
+            <thead><tr><th>Händler / Filiale</th><th>Preise</th><th>Status</th><th>${unitPriceLabel(product)}</th><th>Geprüft / Quelle</th><th>Gültigkeit</th><th>Kommend</th></tr></thead>
             <tbody>${DATA.markets.map(market=>{
               const entry = statusFor(product,market.id);
               let statusLabel="Noch nicht geprüft", statusClass="unchecked";
@@ -414,6 +414,7 @@
                 <td>${renderUnitStack(product,entry)}</td>
                 <td>${formatCheck(entry.checked)}${entry.source ? `<small class="source-note">${escapeHtml(entry.source)}</small>` : ``}</td>
                 <td>${formatValidity(entry) || "—"}${entry.note ? `<small class="source-note">${escapeHtml(entry.note)}</small>` : ``}</td>
+                <td>${(()=>{ const f=futureOffers(product).find(x=>x.marketId===market.id); return f ? `<strong class="future-price">${eur(f.price)}</strong><small class="source-note">${escapeHtml(f.validFrom)}${f.matchType === "family" ? " · Sortenangebot" : ""}</small>` : "—"; })()}</td>
               </tr>`;
             }).join("")}</tbody>
           </table>
