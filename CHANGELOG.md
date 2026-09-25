@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.3.0
+- Fehler der v0.2.0 behoben: vollständiges Projektpaket wiederhergestellt
+- bekannte reale Preisstände statt leerer Mock-Daten eingebaut
+- Coca-Cola Zero 1,25 l: NORMA-Angebot 0,99 € (21.09.–27.09.2026) hinterlegt
+- Coca-Cola Zero 1,25 l: Lidl 1,19 € regulär und 0,99 € Lidl Plus als getrennte Preisarten hinterlegt
+- Preisarten erweitert: regulär, Angebot, App-/Kundenkartenpreis und später Couponpreis
+- App-/Kartenpreise werden sichtbar als solche markiert; Voraussetzungen werden angezeigt
+- Preiswecker berücksichtigt auch App-/Kartenpreise
+- Regel für gemeinsame Coca-Cola-Classic-/Zero-Angebote vorbereitet
+- kein fest eingebauter Nutzerstandort mehr
+- Referenzstandort kann beim ersten Start gesetzt, lokal gespeichert und später geändert werden
+- weiter entfernte Märkte bleiben im Vergleich sichtbar und können günstigster Treffer sein
+- NORMA Mannheim 68307 als konkreter Marktbereich berücksichtigt
+- alle beobachteten Produkte, inklusive der bisherigen Testprodukte, können gelöscht und über die Produktsuche wieder hinzugefügt werden
+- finales Preisscan-App-Logo eingebunden
+- App-Logo als Browser-/PWA-Icon eingebunden
+- Händlerlogos nicht mehr von externen Bildservern abhängig; lokale CSS-Markenbadges eingebaut
+- Versionsnummer sichtbar im Header und Footer
+- Service-Worker-Cache auf v0.3.0 angehoben
+
 ## v0.2.0
 - Händlerlogos ergänzt
 - Filial-/Standortbezeichnungen von Kettenlogos getrennt

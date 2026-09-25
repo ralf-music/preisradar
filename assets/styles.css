@@ -121,3 +121,30 @@ th{color:var(--muted);text-transform:uppercase;letter-spacing:.035em;font-size:.
 @media(max-width:780px){
   .hero-panel{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.product-head{grid-template-columns:86px 1fr}.product-photo{width:86px;height:100px}.best-block{grid-column:2;text-align:left;margin-top:-5px}.metric-grid{grid-template-columns:1fr}.alarm-line{grid-template-columns:1fr}.alert-card{grid-template-columns:1fr}.family-search-row{grid-template-columns:1fr}.catalog-group-head{display:block}.catalog-note{text-align:left;margin-top:8px}.compare-head{align-items:flex-start}.app-footer{flex-direction:column}.hero-stats{grid-template-columns:repeat(3,1fr)}
 }
+
+/* v0.3.0 additions */
+.brand-lockup{display:flex;align-items:center;gap:13px}.app-logo{width:58px;height:58px;border-radius:15px;object-fit:cover;box-shadow:0 8px 25px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.08)}
+.header-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}.version-badge{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:rgba(105,200,255,.08);border:1px solid rgba(105,200,255,.22);color:#dff4ff;font-size:.76rem;font-weight:900;letter-spacing:.03em}
+.location-card{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin:0 0 16px;padding:15px 16px;border:1px solid rgba(105,200,255,.14);border-radius:20px;background:linear-gradient(135deg,rgba(105,200,255,.055),rgba(255,255,255,.018));box-shadow:0 12px 35px rgba(0,0,0,.2)}
+.location-card.editing{grid-template-columns:1.25fr 1fr}.location-copy strong{display:block;font-size:1.02rem}.location-copy p{margin:4px 0 0;color:var(--muted);font-size:.84rem;max-width:790px}.location-form{display:grid;grid-template-columns:1fr auto auto;gap:8px}.location-form input{min-width:260px;background:var(--bg-soft);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:11px 12px;outline:none}.location-form input:focus{border-color:rgba(105,200,255,.45);box-shadow:0 0 0 3px rgba(105,200,255,.08)}
+.best-block small{display:block;color:#6f7e8d;font-size:.68rem;margin-top:2px;max-width:180px}
+
+.market-logo{width:64px;height:42px;padding:4px;border-radius:10px;display:grid;place-items:center;overflow:hidden;font-weight:1000;letter-spacing:-.02em;line-height:1;border:1px solid rgba(255,255,255,.10)}
+.market-logo span{font-size:.69rem;font-weight:1000;white-space:nowrap}
+.brand-lidl{background:#0050aa;border-color:#0050aa}.brand-lidl span{background:#fff000;color:#0050aa;border:2px solid #e60a14;border-radius:999px;width:34px;height:34px;display:grid;place-items:center;font-size:.55rem}
+.brand-aldi{background:linear-gradient(135deg,#001e50 0 38%,#00a5df 38% 56%,#f58220 56% 70%,#fff 70%)}.brand-aldi span{color:#fff;text-shadow:0 1px 2px #001e50;font-size:.58rem}
+.brand-penny{background:#d71920}.brand-penny span{color:#fff;font-size:.72rem;letter-spacing:.02em}
+.brand-netto{background:#ffd400}.brand-netto span{color:#d71920;font-size:.72rem}
+.brand-rewe{background:#cc071e}.brand-rewe span{color:#fff;font-size:.74rem;letter-spacing:.02em}
+.brand-norma{background:#174a8b}.brand-norma span{color:#ffd12f;font-size:.7rem;letter-spacing:.03em}
+.brand-edeka{background:#ffd500}.brand-edeka span{color:#0050a4;font-size:.72rem;letter-spacing:.02em}
+.brand-globus{background:#fff}.brand-globus span{color:#e24a22;font-size:.66rem}.brand-globus span::after{content:" •";color:#5f9e38}
+.brand-marktkauf{background:#f28c00}.brand-marktkauf span{color:#173d7a;font-size:.59rem}
+.brand-kaufland{background:#fff}.brand-kaufland span{color:#d71920;font-size:.64rem;border-left:4px solid #d71920;padding-left:5px}
+.brand-scheckin{background:#fff}.brand-scheckin span{color:#2f7b3c;font-size:.58rem}.brand-generic{background:#25313f}.brand-generic span{color:#fff}
+
+.price-stack{display:flex;flex-direction:column;gap:7px;min-width:145px}.price-option{display:grid;grid-template-columns:auto auto;gap:4px 7px;align-items:center;width:max-content;max-width:220px}.price-option small{grid-column:1/-1;color:var(--muted);font-size:.7rem;white-space:normal}.price-type{display:inline-flex;align-items:center;padding:4px 7px;border-radius:999px;font-size:.68rem;font-weight:900;border:1px solid rgba(255,255,255,.08);white-space:nowrap}.price-type.regular-price{background:rgba(255,255,255,.05);color:#d9e0e8}.price-type.offer-price{background:var(--orange-soft);border-color:rgba(255,180,84,.26);color:#ffe5bf}.price-type.app-price{background:rgba(105,200,255,.10);border-color:rgba(105,200,255,.28);color:#dff4ff}.unit-stack{display:flex;flex-direction:column;gap:6px}.unit-stack div{font-weight:800;white-space:nowrap}.unit-stack small{display:block;color:var(--muted);font-weight:500;font-size:.68rem}.source-note{display:block;color:var(--muted);font-size:.7rem;margin-top:4px;max-width:220px;white-space:normal}
+
+@media(max-width:780px){
+  .app-header{align-items:flex-start}.app-logo{width:50px;height:50px;border-radius:13px}.header-actions{justify-content:flex-start}.location-card,.location-card.editing{grid-template-columns:1fr}.location-form{grid-template-columns:1fr}.location-form input{min-width:0;width:100%}.market-logo{width:58px}.price-option{width:auto}.price-stack{min-width:130px}
+}

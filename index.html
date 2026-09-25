@@ -4,34 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d1117">
-  <meta name="description" content="Private Einkaufshilfe und Preisübersicht für Mannheim und Umgebung.">
-  <title>Einkaufshilfe</title>
+  <meta name="description" content="Private Einkaufshilfe und Preisübersicht mit Preisvergleich und Preiswecker.">
+  <title>Einkaufshilfe – preisscan</title>
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="assets/icons/preisscan-app.png">
+  <link rel="apple-touch-icon" href="assets/icons/preisscan-app.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <div class="app-shell">
     <header class="app-header">
-      <div>
-        <div class="eyebrow">preisscan</div>
-        <h1>Einkaufshilfe</h1>
-        <p>Mannheim 68219, Brühl und Umgebung</p>
+      <div class="brand-lockup">
+        <img class="app-logo" src="assets/icons/preisscan-app.png" alt="Preisscan App-Logo">
+        <div>
+          <div class="eyebrow">preisscan</div>
+          <h1>Einkaufshilfe</h1>
+          <p id="locationSummary">Standort noch nicht festgelegt</p>
+        </div>
       </div>
-      <button id="installBtn" class="ghost-btn" hidden>Installieren</button>
+      <div class="header-actions">
+        <span class="version-badge">v0.3.0</span>
+        <button id="installBtn" class="ghost-btn" hidden>Installieren</button>
+      </div>
     </header>
 
     <section class="hero-panel">
       <div>
         <span class="hero-kicker">Private Preisübersicht</span>
         <h2>Preise vergleichen, Produktvarianten finden und Preisziele beobachten.</h2>
-        <p>Die statische PWA-Basis ist aktiv. Preisquellen, automatische Hintergrundchecks und Push-Benachrichtigungen werden später über das Backend verbunden.</p>
+        <p>Aktuelle bekannte Preise werden angezeigt. Automatische Händlerabfragen, Hintergrundchecks und echte Push-Benachrichtigungen kommen später mit dem Backend.</p>
       </div>
       <div class="hero-stats">
         <div><strong id="productCount">0</strong><span>beobachtet</span></div>
         <div><strong id="marketCount">0</strong><span>Märkte</span></div>
-        <div><strong id="knownPriceCount">0</strong><span>Preise</span></div>
+        <div><strong id="knownPriceCount">0</strong><span>Preisstände</span></div>
       </div>
     </section>
+
+    <div id="locationBar"></div>
 
     <div class="toolbar">
       <input id="searchInput" type="search" placeholder="Beobachtete Produkte, Händler oder Ort suchen">
@@ -56,7 +66,7 @@
     </main>
 
     <footer class="app-footer">
-      <span>preisscan v0.2.0</span>
+      <span>preisscan v0.3.0</span>
       <span>Backend noch nicht verbunden</span>
     </footer>
   </div>

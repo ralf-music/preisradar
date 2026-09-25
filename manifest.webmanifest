@@ -1,10 +1,20 @@
 {
   "name": "Einkaufshilfe",
   "short_name": "Preisscan",
+  "id": "./",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#090c10",
   "theme_color": "#0d1117",
   "lang": "de",
-  "description": "Private Preisübersicht und Produktsuche für Mannheim und Umgebung."
+  "description": "Private Preisübersicht, Produktsuche und Preiswecker.",
+  "icons": [
+    {
+      "src": "assets/icons/preisscan-app.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
